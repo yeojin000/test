@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YEOJIN JANG | Personal website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+  <meta content="YEOJIN JANG | Personal website" name="title">
+  <meta content="YEOJIN" name="student">
+  <meta content="A Personal website for YEOJIN JANG" name="description">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    $(document).ready(function() {
+      $('#navIcon').click(function() {
+        $('#navMenu').slideToggle('slow');
+      });
+
+      $('nav a').click(function() {
+        var target = $(this).data('target');
+        $('.section').removeClass('active');
+        $(target).addClass('active');
+        $('#navMenu').slideUp('slow');
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2 class="header">YEOJIN's Page</h2>
+  
+  <div class="icon-container">
+    <img src="icon.png" alt="Icon" id="navIcon" class="icon">
+  </div>
+  <nav id="navMenu" class="hidden">
+    <ul>
+      <li><a data-target="#home">Home</a></li>
+      <li><a data-target="#about">About</a></li>
+    </ul>
+  </nav>
+  <div id="home" class="section active">
+    <div class="profile-container">
+      <img src="yeojin.jpg" id="yeo-profile" class="profile">
+      <div id="intro">
+        <small>I am Jang Yeojin, a second year computer engineering major at Kangwon National University. I am a 22-year-old woman. I was studying web design at first. Then, I became interested in web development and chose computer engineering as my major.</small>
+      </div>
+    </div>
+    <div id="detail">
+      <i>Name: Yeojin Jang</i><br>
+      <i>Age: 22</i><br>
+      <i>Number: 010-xxxx-7187</i><br>
+      <i>Mail: <a href="mailto:yeojiny0@gmail.com" class="email-link">yeojiny0@gmail.com</a></i>
+    </div>
+  </div>
+  <div id="about" class="section">
+    <h2>About Me</h2>
+    <div class="about-content clearfix">
+      <div class="section-item">
+        <h3>STUDYING</h3>
+        <p>Java, C, HTML/CSS</p>
+      </div>
+      <div class="section-item">
+        <h3>EDUCATION</h3>
+        <p>2019.03<br>서울디자인고등학교 시각 디자인과 입학<br>
+           2019.09<br>혜화여자고등학교 전학<br>
+           2022.01<br>혜화여자고등학교 졸업<br>
+           2023.03<br>강원대학교 컴퓨터 공학과 입학 </p>
+      </div>
+      <div class="section-item">
+        <h3>CONTACT_ME</h3>
+        <p>Number: 010-xxxx-7187</p>
+        <p>Mail: <a href="mailto:yeojiny0@gmail.com" class="email-link">yeojiny0@gmail.com</a></p>
+        <a href="https://www.instagram.com/yeojin_03_" target="_blank">
+        <img src="instargram.png" id="instargram" class="instargram-icon">
+        </a>
+        <a href="https://github.com/yeojin000" target="_blank">
+        <img src="github.png" id="github" class="github-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
